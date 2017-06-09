@@ -15,6 +15,7 @@ type EulerProblem interface {
 var Problems = []EulerProblem{
 	&problem00001{},
 	&problem00002{},
+	&problem00003{},
 }
 
 // SolveAll - solve all Euler Problems and display solution

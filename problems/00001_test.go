@@ -13,6 +13,6 @@ func Test00001(t *testing.T) {
 
 	result := p1.getResult()
 	if result != solution {
-		t.Errorf("Problem 1 is %v and should be %v", result, solution)
+		t.Errorf("Problem 1 solution is %v and should be %v", result, solution)
 	}
 }
