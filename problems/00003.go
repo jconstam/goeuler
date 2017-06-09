@@ -3,11 +3,11 @@ package problems
 import "fmt"
 
 type problem00003 struct {
-	factor int64
+	largestFactor int64
 }
 
 func (prob problem00003) getName() string {
-	return "Largest prime factor"
+	return "Largest prime largestFactor"
 }
 
 func (prob *problem00003) solve() {
@@ -18,17 +18,17 @@ func (prob *problem00003) solve() {
 	for counter*counter <= newValue {
 		if newValue%counter == 0 {
 			newValue = newValue / counter
-			prob.factor = counter
+			prob.largestFactor = counter
 		} else {
 			counter++
 		}
 	}
 
-	if newValue > prob.factor {
-		prob.factor = newValue
+	if newValue > prob.largestFactor {
+		prob.largestFactor = newValue
 	}
 }
 
 func (prob problem00003) getResult() string {
-	return fmt.Sprintf("%v", prob.factor)
+	return fmt.Sprintf("%v", prob.largestFactor)
 }
