@@ -17,6 +17,7 @@ var Problems = []EulerProblem{
 	&problem00003{},
 	&problem00004{},
 	&problem00005{},
+	&problem00006{},
 }
 
 // SolveAll - solve all Euler Problems and display solution
