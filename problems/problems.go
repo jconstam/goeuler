@@ -1,14 +1,13 @@
 package problems
 
-import (
-	"fmt"
-)
+import "fmt"
 
 // EulerProblem - Generic interface for an Euler Problem solution
 type EulerProblem interface {
-	getName() string
 	solve()
-	getResult() string
+	getInfo() (string, string)
+	getExpectedResult() float64
+	getActualResult() float64
 }
 
 // Problems - Array containing interface implementations of all solutions
@@ -20,8 +19,16 @@ var Problems = []EulerProblem{
 
 // SolveAll - solve all Euler Problems and display solution
 func SolveAll() {
+	fmt.Printf("========================================\n")
 	for i, currProblem := range Problems {
 		currProblem.solve()
-		fmt.Printf("Problem %d (%s): %v\n", i+1, currProblem.getName(), currProblem.getResult())
+		name, descrip := currProblem.getInfo()
+		fmt.Printf("\n")
+		fmt.Printf("Problem %v - %v\n", i+1, name)
+		fmt.Printf("%v\n", descrip)
+		fmt.Printf("\n")
+		fmt.Printf("Result: %v\n", currProblem.getActualResult())
+		fmt.Printf("\n")
+		fmt.Printf("========================================\n")
 	}
 }

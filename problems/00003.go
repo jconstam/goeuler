@@ -1,22 +1,20 @@
 package problems
 
-import "fmt"
-
 type problem00003 struct {
-	largestFactor int64
+	largestFactor float64
 }
 
-func (prob problem00003) getName() string {
-	return "Largest prime largestFactor"
+func (prob problem00003) getInfo() (string, string) {
+	return "Largest prime largestFactor", "The prime factors of 13195 are 5, 7, 13 and 29.\nWhat is the largest prime factor of the number 600851475143 ?"
 }
 
 func (prob *problem00003) solve() {
-	value := int64(600851475143)
+	value := float64(600851475143)
 	newValue := value
 
-	counter := int64(2)
+	counter := float64(2)
 	for counter*counter <= newValue {
-		if newValue%counter == 0 {
+		if int64(newValue)%int64(counter) == 0 {
 			newValue = newValue / counter
 			prob.largestFactor = counter
 		} else {
@@ -29,6 +27,10 @@ func (prob *problem00003) solve() {
 	}
 }
 
-func (prob problem00003) getResult() string {
-	return fmt.Sprintf("%v", prob.largestFactor)
+func (prob problem00003) getExpectedResult() float64 {
+	return float64(6857)
+}
+
+func (prob problem00003) getActualResult() float64 {
+	return prob.largestFactor
 }
