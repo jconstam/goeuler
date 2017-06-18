@@ -1,4 +1,4 @@
-package problems
+package goeuler
 
 type problem00003 struct {
 	largestFactor float64

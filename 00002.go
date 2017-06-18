@@ -1,4 +1,4 @@
-package problems
+package goeuler
 
 type problem00002 struct {
 	sum float64

@@ -1,4 +1,4 @@
-package problems
+package goeuler
 
 type problem00005 struct {
 	smallestMultiple float64

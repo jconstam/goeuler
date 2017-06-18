@@ -1,4 +1,4 @@
-package problems
+package goeuler
 
 import (
 	"testing"
@@ -6,7 +6,7 @@ import (
 
 // TestSolveAll
 func TestSolveAll(t *testing.T) {
-	SolveAll()
+	main()
 }
 
 func TestAll(t *testing.T) {

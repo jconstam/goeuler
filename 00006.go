@@ -1,4 +1,4 @@
-package problems
+package goeuler
 
 type problem00006 struct {
 	difference float64

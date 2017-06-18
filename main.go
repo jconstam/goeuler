@@ -1,7 +1,5 @@
-package main
-
-import "github.com/jconstam/goeuler/problems"
+package goeuler
 
 func main() {
-	problems.SolveAll()
+	SolveAll()
 }
